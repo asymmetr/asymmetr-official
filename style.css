@@ -117,6 +117,10 @@ nav{
 
     width:100%;
 
+   left:0;
+   
+　　top:0;
+
     display:flex;
 
     justify-content:space-between;
@@ -200,6 +204,8 @@ Hero Text
     z-index:10;
 
     width:90%;
+
+   max-width:900px;
 
 }
 
