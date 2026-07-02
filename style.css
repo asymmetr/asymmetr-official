@@ -1,1 +1,423 @@
+/* ===========================
+   Asymme'tr Official Site
+=========================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Noto Serif JP',serif;
+    background:#0b0b0b;
+    color:#ffffff;
+    line-height:1.8;
+    overflow-x:hidden;
+
+}
+
+/* =======================
+Loading
+======================= */
+
+#loading{
+
+    position:fixed;
+    inset:0;
+
+    background:#000;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+    transition:1s;
+
+}
+
+.loading-logo img{
+
+    width:170px;
+
+    animation:fadeLogo 2s ease infinite;
+
+}
+
+@keyframes fadeLogo{
+
+0%{
+opacity:0.2;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+opacity:0.2;
+}
+
+}
+
+/* =======================
+Hero
+======================= */
+
+.hero{
+
+    height:100vh;
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.hero-image{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+.hero-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.hero-filter{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+}
+
+/* =======================
+Navigation
+======================= */
+
+nav{
+
+    position:fixed;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 8%;
+
+    z-index:1000;
+
+    transition:.4s;
+
+}
+
+nav.scrolled{
+
+    background:rgba(0,0,0,.8);
+
+    backdrop-filter:blur(12px);
+
+}
+
+.nav-logo{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:32px;
+
+    letter-spacing:3px;
+
+    color:#d8b15a;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:.3s;
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+}
+
+nav a:hover{
+
+    color:#d8b15a;
+
+}
+
+/* =======================
+Hero Text
+======================= */
+
+.hero-content{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    text-align:center;
+
+    z-index:10;
+
+    width:90%;
+
+}
+
+.hero-logo{
+
+    width:220px;
+
+    margin-bottom:30px;
+
+}
+
+.subtitle{
+
+    color:#d8b15a;
+
+    letter-spacing:4px;
+
+    font-size:14px;
+
+}
+
+.hero h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:68px;
+
+    margin-top:15px;
+
+    line-height:1.1;
+
+}
+
+.official{
+
+    margin-top:15px;
+
+    font-size:18px;
+
+    letter-spacing:4px;
+
+}
+
+.catch{
+
+    margin-top:40px;
+
+    font-size:22px;
+
+    letter-spacing:2px;
+
+}
+
+/* =======================
+Scroll
+======================= */
+
+.scroll{
+
+    position:absolute;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:10;
+
+    color:white;
+
+    font-size:12px;
+
+    letter-spacing:3px;
+
+}
+
+.scroll span{
+
+    display:block;
+
+    width:2px;
+
+    height:60px;
+
+    background:white;
+
+    margin:0 auto 10px;
+
+    animation:scroll 2s infinite;
+
+}
+
+@keyframes scroll{
+
+0%{
+transform:scaleY(0);
+transform-origin:top;
+}
+
+50%{
+transform:scaleY(1);
+transform-origin:top;
+}
+
+51%{
+transform-origin:bottom;
+}
+
+100%{
+transform:scaleY(0);
+transform-origin:bottom;
+}
+
+}
+
+/* =======================
+Section
+======================= */
+
+section{
+
+    padding:120px 10%;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-title h2{
+
+    font-size:42px;
+
+    color:#d8b15a;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.section-title p{
+
+    color:#999;
+
+    margin-top:10px;
+
+    letter-spacing:3px;
+
+}
+
+/* =======================
+About
+======================= */
+
+.about-wrapper{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:70px;
+
+}
+
+.about-image{
+
+    flex:1;
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:8px;
+
+}
+
+.about-text{
+
+    flex:1;
+
+}
+
+.about-text p{
+
+    margin-bottom:25px;
+
+    font-size:17px;
+
+    line-height:2;
+
+}
+
+/* =======================
+Fade Animation
+======================= */
+
+.fade{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:1.2s;
+
+}
+
+.fade.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
