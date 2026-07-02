@@ -736,17 +736,46 @@ padding:90px 8%;
 Small
 ======================= */
 
-@media (max-width: 600px){
+@media (max-width:600px){
 
     nav{
-        flex-direction:column;
-        gap:15px;
+        padding:12px 15px;
     }
 
     nav ul{
-        justify-content:center;
-        gap:15px;
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:flex-end;
     }
+
+    .nav-logo{
+        font-size:26px;
+    }
+
+    .hero-content{
+        width:90%;
+        top:55%;
+    }
+
+    .hero-logo{
+        width:150px;
+    }
+
+    .hero h1{
+        font-size:36px;
+        line-height:1.3;
+    }
+
+    .subtitle,
+    .official{
+        font-size:13px;
+    }
+
+    .catch{
+        font-size:17px;
+    }
+
+}
 
     .hero-content{
         width:92%;
