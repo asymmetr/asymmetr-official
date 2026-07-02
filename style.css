@@ -734,3 +734,47 @@ padding:90px 8%;
 
 /* =======================
 Small
+======================= */
+
+@media (max-width: 600px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        justify-content:center;
+        gap:15px;
+    }
+
+    .hero-content{
+        width:92%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        text-align:center;
+    }
+
+    .hero-logo{
+        width:140px;
+    }
+
+    .hero h1{
+        font-size:42px;
+        line-height:1.3;
+    }
+
+    .catch{
+        font-size:18px;
+    }
+
+    .subtitle,
+    .official{
+        font-size:14px;
+    }
+
+    .scroll{
+        bottom:20px;
+    }
+
+}
